@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Live Auctions</title>
 </head>
 <body>
 <%@ page import ="java.sql.*" %>
@@ -18,7 +18,12 @@
         auctionCheck = stmt.executeQuery("SELECT * FROM auction");
         while (auctionCheck.next()) {
         	int id = auctionCheck.getInt("auction_id");
-        	out.println(id);
+        	int price = auctionCheck.getInt("init_price");
+        	Date date = auctionCheck.getDate("close_date");
+        	int item_id = auctionCheck.getInt("item_id");
+        	String user = auctionCheck.getString("seller_username");
+        	out.println("<h1>Auction " +id+ "</h1>");
+        	out.println("<p>" +user+ " is selling item number " +item_id+ " until " +date+ " for the price of $" +price+ "</p>");
         }
         %>
 </body>

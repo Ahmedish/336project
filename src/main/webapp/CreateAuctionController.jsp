@@ -16,7 +16,7 @@
     	String increment = request.getParameter("increment");
     	String close_date = request.getParameter("close_date");
     	String item_id = request.getParameter("item_id");
-    	String username = request.getParameter("username");
+    	String username = (String) session.getAttribute("user");
     	
         
         ApplicationDB db = new ApplicationDB();    

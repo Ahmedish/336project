@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Register</title>
+<title>Create Auction</title>
 	
 </head>
 <body>
-<h1>Register</h1>
+<h1>Create Auction</h1>
 <form action="CreateAuctionController.jsp" method="POST">
 	   ID: <input type="number" name="id"/> <br/>
        Initial Price: <input type="number" name="init_price"/> <br/>
@@ -17,7 +17,6 @@
        Close Date: <input type="date" name="close_date"/> <br/>
        Increment: <input type="number" name="increment"/> <br/>
        Item ID: <input type="number" name="item_id"/> <br/>
-       Username: <input type="text" name="username"/> <br/>
        <input type="submit" value="Submit"/>
      </form>
 </body>
