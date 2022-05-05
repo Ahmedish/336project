@@ -10,7 +10,6 @@
 <body>
     <%@ page import ="java.sql.*" %>
     <%
-        String auc_id = request.getParameter("id");
     	String init_price = request.getParameter("init_price");
     	String min_price = request.getParameter("min_price");
     	String increment = request.getParameter("increment");
@@ -23,7 +22,7 @@
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
         
-        stmt.executeUpdate("INSERT INTO auction VALUES ('" +auc_id+ "', '" +init_price+ "', '" +min_price+ "', '" +increment+ "', '" +close_date+ "', '" +item_id+ "', '" +username+ "');");
+        stmt.executeUpdate("INSERT INTO auction (seller_username, init_price, min_price, curr_price, increment, close_date, item_id) VALUES ('" +username+ "', '" +init_price+ "', '" +min_price+ "', '" +init_price+ "', '" +increment+ "', '" +close_date+ "', '" +item_id+ "');");
         response.sendRedirect("LiveAuctions.jsp");
         
         

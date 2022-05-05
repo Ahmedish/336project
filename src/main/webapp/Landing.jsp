@@ -22,6 +22,7 @@ You are not logged in
 <a class="btn btn-danger" href="Logout.jsp">Log out</a>
 <a class="btn btn-success" href="CreateAuction.jsp">Create Auction</a>
 <a class="btn btn-primary" href="LiveAuctions.jsp">View Live Auctions</a>
+
 <%
     }
 %>
