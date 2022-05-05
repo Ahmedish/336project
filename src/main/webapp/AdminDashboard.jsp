@@ -12,7 +12,8 @@
     if ((session.getAttribute("user") == null)) response.sendRedirect("Landing.jsp");
 %>
 <h1>Welcome Admin!</h1>
-<a href="SalesReport.jsp">View Sales Report</a>
-<a href="Logout.jsp">Log out</a>
+<a class="btn btn-primary" href="SalesReport.jsp">View Sales Report</a>
+<a class="btn btn-success" href="CreateCustomerRep.jsp">Create Customer Rep</a>
+<a class="btn btn-danger" href="Logout.jsp">Log out</a>
 </body>
 </html>
