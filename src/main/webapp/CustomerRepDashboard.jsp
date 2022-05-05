@@ -12,25 +12,30 @@
 <%
     if ((session.getAttribute("user") == null)) response.sendRedirect("Landing.jsp");
 %>
-<h1>Welcome Admin!</h1>
+<h1>Welcome Customer Rep!</h1>
 <%@ page import ="java.sql.*" %>
-<h3>Current Customer Representatives</h3>
+<a class="btn btn-success" href="SalesReport.jsp">Bid And Auction Management</a>
+<a class="btn btn-success" href="CreateCustomerRep.jsp">User Management</a>
+<a class="btn btn-danger" href="Logout.jsp">Log out</a>
+<h3>Current Questions</h3>
 <ul>
 <%
         ApplicationDB db = new ApplicationDB();    
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
-        ResultSet customerRep = stmt.executeQuery("SELECT username FROM customer_rep_users");
+        ResultSet customerRep = stmt.executeQuery("SELECT * FROM questions");
         while (customerRep.next()) {
         	String user = customerRep.getString("username");
-         	out.println("<li><h6>" +user+ "</h6></li>");
+        	String question = customerRep.getString("question");
+        	String id = customerRep.getString("question_id");
+        	String answer = customerRep.getString("answer");
+        	out.println("<h5>"+ question + "</h5");
+         	out.println("<h6>from " +user+ "</h6><br />");
+         	out.println("<strong>" +answer+ "</strong><br />");
+         	out.println("<a href='CustomerRepReply.jsp?question_id="+id+"'>Reply</a>");
         }
-
 
 %>
 </ul>
-<a class="btn btn-primary" href="SalesReport.jsp">View Sales Report</a>
-<a class="btn btn-success" href="CreateCustomerRep.jsp">Create Customer Rep</a>
-<a class="btn btn-danger" href="Logout.jsp">Log out</a>
 </body>
 </html>
