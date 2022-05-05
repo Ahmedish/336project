@@ -23,7 +23,7 @@
     	    if (rs2.next()) {
     	    	session.setAttribute("user", userid); // the username will be stored in the session
     	    	session.setAttribute("isAdmin", true);
-    	        response.sendRedirect("SalesReport.jsp");
+    	        response.sendRedirect("AdminDashboard.jsp");
     	    } else {
     	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Admin Account</a>");
     	    }

@@ -5,15 +5,14 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Register</title>
-	
+<title>Home</title>
 </head>
 <body>
-<h1>Register</h1>
-<form action="RegisterController.jsp" method="POST">
-       Username: <input type="text" name="Username"/> <br/>
-       Password: <input type="password" name="Password"/> <br/>
-       <input type="submit" value="Submit"/>
-     </form>
+<%
+    if ((session.getAttribute("user") == null)) response.sendRedirect("Landing.jsp");
+%>
+<h1>Welcome Admin!</h1>
+<a href="SalesReport.jsp">View Sales Report</a>
+<a href="Logout.jsp">Log out</a>
 </body>
 </html>

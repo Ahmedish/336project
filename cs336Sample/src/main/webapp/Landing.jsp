@@ -15,7 +15,7 @@ You are not logged in<br/>
 <a href="Register.jsp">Register</a>
 <%} else {
 %>
-Welcome <%=session.getAttribute("user") %>  
+Welcome <%=session.getAttribute("user")%>
 <a href="Logout.jsp">Log out</a>
 <a href="CreateAuction.jsp">Create Auction</a>
 <a href="LiveAuctions.jsp">View Live Auctions</a>
