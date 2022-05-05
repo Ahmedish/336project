@@ -14,6 +14,7 @@
 You are not logged in
 <br/>
 <a class="btn btn-primary" href="Login.jsp">End-User Login</a>
+<a class="btn btn-primary" href="CustomerRepLogin.jsp">Customer Rep Login</a>
 <a class="btn btn-primary" href="AdminLogin.jsp">Admin Login</a>
 <a class="btn btn-primary" href="Register.jsp">Register</a>
 <%} else {
@@ -22,6 +23,7 @@ You are not logged in
 <a class="btn btn-danger" href="Logout.jsp">Log out</a>
 <a class="btn btn-success" href="CreateAuction.jsp">Create Auction</a>
 <a class="btn btn-primary" href="LiveAuctions.jsp">View Live Auctions</a>
+<a class="btn btn-primary" href="UserAskQuestion.jsp">Ask Question</a>
 
 <%
     }
