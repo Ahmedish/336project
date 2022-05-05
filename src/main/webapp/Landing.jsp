@@ -12,15 +12,15 @@
     if ((session.getAttribute("user") == null)) {
 %>
 You are not logged in<br/>
-<a href="Login.jsp">End-User Login</a>
-<a href="AdminLogin.jsp">Admin Login</a>
+<a href="Login.jsp">End-User Login</a><br>
+<a href="AdminLogin.jsp">Admin Login</a><br>
 <a href="Register.jsp">Register</a>
 <%} else {
 %>
 <h1>Welcome <%=session.getAttribute("user")%></h1> 
-<a href="Logout.jsp">Log out</a>
-<a href="CreateAuction.jsp">Create Auction</a>
-<a href="LiveAuctions.jsp">View Live Auctions</a>
+<a href="Logout.jsp">Log out</a> <br>
+<a href="CreateAuction.jsp">Create Auction</a> <br>
+<a href="LiveAuctions.jsp">View Live Auctions</a> <br>
 <%
     }
 %>

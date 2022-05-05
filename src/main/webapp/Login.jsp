@@ -9,11 +9,13 @@
 	
 </head>
 <body>
-<h1>Login</h1>
+<div style="display:flex; justify-content:center; margin-top: 250px;">
 <form action="CheckLogin.jsp" method="POST">
-       Username: <input type="text" name="Username"/> <br/>
-       Password: <input type="password" name="Password"/> <br/>
-       <input type="submit" value="Submit"/>
+<h1 style="text-align:center;">Login</h1>
+       <div class="form-group"> Username: <input type="text" name="Username"/></div>
+       <div class="form-group">Password: <input type="password" name="Password"/></div>
+       <button type="submit" class="btn btn-success">Submit</button>
      </form>
+</div>
 </body>
 </html>
