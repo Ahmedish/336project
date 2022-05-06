@@ -22,7 +22,8 @@
             out.println("User Already Exists <a href='Register.jsp'>Register<a>");
         }
         else{
-            stmt.executeUpdate("INSERT INTO users VALUES ('" +userid+ "', '" +pass+ "');");
+            stmt.executeUpdate("INSERT INTO users (username,password) VALUES ('" +userid+ "', '" +pass+ "');");
+            
             session.setAttribute("user", userid); 
             response.sendRedirect("Landing.jsp");
         }

@@ -23,7 +23,8 @@
     	 ResultSet rs2;
     	    rs2 = stmt.executeQuery("select * from users where username='" + userid + "' and password='" + pass + "'");
     	    if (rs2.next()) {
-    	    	session.setAttribute("user", userid); // the username will be stored in the session
+    	    	int id = rs2.getInt("user_id");
+    	    	session.setAttribute("user", id); // the username will be stored in the session
     	        response.sendRedirect("Landing.jsp");
     	    } else {
     	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Account</a>");
