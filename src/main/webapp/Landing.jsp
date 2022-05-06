@@ -37,6 +37,7 @@ You are not logged in
 <a class="btn btn-success" href="CreateAuction.jsp">Create Auction</a>
 <a class="btn btn-primary" href="LiveAuctions.jsp">View Live Auctions</a>
 <a class="btn btn-primary" href="UserAskQuestion.jsp">Ask Question</a>
+<a class="btn btn-primary" href="UserViewQuestion.jsp">View Question</a>
 
 <%
     }
