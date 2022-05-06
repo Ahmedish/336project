@@ -22,9 +22,12 @@
             out.println("User Already Exists <a href='Register.jsp'>Register<a>");
         }
         else{
-            stmt.executeUpdate("INSERT INTO users (username,password) VALUES ('" +userid+ "', '" +pass+ "');");
-            
-            session.setAttribute("user", userid); 
+            int user = stmt.executeUpdate("INSERT INTO users (username,password) VALUES ('" +userid+ "', '" +pass+ "');");
+            ResultSet finalUserId = stmt.executeQuery("SELECT * FROM users WHERE username='" +userid+ "';");
+           	if(finalUserId.next()){
+               	session.setAttribute("user", finalUserId.getInt("user_id"));
+           	}
+            session.setAttribute("username", userid); 
             response.sendRedirect("Landing.jsp");
         }
     %>

@@ -10,15 +10,16 @@
 <body>
     <%@ page import ="java.sql.*" %>
     <%
-    	String username = (String) session.getAttribute("user");
+    	String username = (String) session.getAttribute("username");
+    	int user_id = (int) session.getAttribute("user");
     	String question = request.getParameter("question");
     	
         
         ApplicationDB db = new ApplicationDB();    
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
-        
-        stmt.executeUpdate("INSERT INTO questions (username, question, answer) VALUES ('" +username+ "', '" +question+ "', '');");
+
+        stmt.executeUpdate("INSERT INTO questions (username, user_id, question, answer) VALUES ('" +username+ "', '" +user_id+ "','" +question+ "', '');");
         response.sendRedirect("Landing.jsp");
         
         

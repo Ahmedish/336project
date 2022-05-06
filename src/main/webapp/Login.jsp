@@ -15,6 +15,8 @@
        <div class="form-group"> Username: <input type="text" name="Username"/></div>
        <div class="form-group">Password: <input type="password" name="Password"/></div>
        <button type="submit" class="btn btn-success">Submit</button>
+       <button type="button" class="btn btn-primary" name="back" onclick="history.back()">Back</button>
+       
      </form>
 </div>
 </body>

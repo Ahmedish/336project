@@ -25,6 +25,7 @@
     	    if (rs2.next()) {
     	    	int id = rs2.getInt("user_id");
     	    	session.setAttribute("user", id); // the username will be stored in the session
+    	    	session.setAttribute("username", userid); // the username will be stored in the session
     	        response.sendRedirect("Landing.jsp");
     	    } else {
     	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Account</a>");

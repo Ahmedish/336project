@@ -18,16 +18,18 @@
         ResultSet auctionCheck;
         long millis = System.currentTimeMillis();
         java.sql.Date curr = new java.sql.Date(millis);
-        auctionCheck = stmt.executeQuery("SELECT * FROM auction WHERE  close_date > " + "'" + curr + "'");
+        auctionCheck = stmt.executeQuery("SELECT * FROM auction JOIN users on users.user_id=auction.seller_username WHERE close_date > " + "'" + curr + "'");
         out.println("<h1>Live Auctions</h1>");
         while (auctionCheck.next()) {
         	int id = auctionCheck.getInt("auction_id");
         	int price = auctionCheck.getInt("curr_price");
         	Date date = auctionCheck.getDate("close_date");
         	int item_id = auctionCheck.getInt("item_id");
-        	String user = auctionCheck.getString("seller_username");
+        	int user = auctionCheck.getInt("seller_username");
+        	String username = auctionCheck.getString("username");
         	out.println("<div><h2>Auction " +id+ "</h2>");
-        	out.println("<p>" +user+ " is auctioning item number " +item_id+ " until " +date+ " for a current price of $" +price+ "</p></div>");
+
+        	out.println("<p>" +username+ " is auctioning item number " +item_id+ " until " +date+ " for a current price of $" +price+ "</p></div>");
         	String src = "";
         	if (item_id == 9987){
         		src = "https://cdn.lookastic.com/mint-skinny-jeans/asos-skinny-jeans-in-light-green-medium-171909.jpg";

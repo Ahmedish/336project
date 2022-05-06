@@ -9,11 +9,15 @@
 	
 </head>
 <body>
-<h1>Register</h1>
+<div style="display:flex; justify-content:center; margin-top: 250px;">
 <form action="RegisterController.jsp" method="POST">
-       Username: <input type="text" name="Username"/> <br/>
-       Password: <input type="password" name="Password"/> <br/>
-       <input type="submit" value="Submit"/>
-     </form>
+	   <h1 style="text-align:center;">Register</h1>
+	   <div class="form-group">Username: <input type="text" name="Username"/></div>
+	   <div class="form-group">Password: <input type="password" name="Password"/></div>
+       <button type="submit" class="btn btn-success">Submit</button>
+       <button type="button" class="btn btn-primary" name="back" onclick="history.back()">Back</button>
+      
+</form>
+</div>
 </body>
 </html>
