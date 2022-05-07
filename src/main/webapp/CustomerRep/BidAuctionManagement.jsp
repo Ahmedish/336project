@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%@ page import="java.sql.*"%>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<%
 	ResultSet auctionCheck;
@@ -41,7 +41,7 @@
 		out.println("<img src= \"" + src + " \"width = \"300px\">");
 	}
 	%>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

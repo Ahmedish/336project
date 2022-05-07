@@ -4,28 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Admin Login Controller</title>
+<title>Customer Rep Login Controller</title>
 </head>
 <body>
 	<%@ page import ="java.sql.*" %>
+	<%@ include file="/header.jsp"%>
 <%
     String userid = request.getParameter("Username");   
     String pass = request.getParameter("Password");
     
-    ApplicationDB db = new ApplicationDB();	
-	Connection con = db.getConnection();	
-	Statement stmt = con.createStatement();
     ResultSet rs1;
-    rs1 = stmt.executeQuery("select * from admin_users where username='" + userid + "'");
+    rs1 = stmt.executeQuery("select * from customer_rep_users where username='" + userid + "'");
     if (rs1.next()){
     	 ResultSet rs2;
-    	    rs2 = stmt.executeQuery("select * from admin_users where username='" + userid + "' and password='" + pass + "'");
+    	    rs2 = stmt.executeQuery("select * from customer_rep_users where username='" + userid + "' and password='" + pass + "'");
     	    if (rs2.next()) {
     	    	session.setAttribute("username", userid); // the username will be stored in the session
-    	    	session.setAttribute("userType", "admin");
-    	        response.sendRedirect("Landing.jsp");
+    	    	session.setAttribute("userType", "customerrep"); // the username will be stored in the session
+    	        response.sendRedirect(projectName+"/Landing.jsp");
     	    } else {
-    	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Admin Account</a>");
+    	    	out.println("Username doesn't exist <a href= 'Landing.jsp'>Go To Landing</a>");
     	    }
     }
     else{

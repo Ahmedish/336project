@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%@ page import="java.sql.*"%>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<%
 
@@ -59,7 +59,7 @@
 		out.println("<h2>No Best Buyer</h2>");
 	}
 	%>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

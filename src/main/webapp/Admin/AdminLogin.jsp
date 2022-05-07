@@ -5,15 +5,15 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
+<title>Admin Login</title>
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div style="display: flex; justify-content: center; margin-top: 250px;">
-		<form action="CheckLogin.jsp" method="POST">
-			<h1 style="text-align: center;">Login</h1>
+		<form action="AdminLoginController.jsp" method="POST">
+			<h1 style="text-align: center;">Admin Login</h1>
 			<div class="form-group">
 				Username: <input type="text" name="Username" />
 			</div>
@@ -25,7 +25,7 @@
 
 		</form>
 	</div>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

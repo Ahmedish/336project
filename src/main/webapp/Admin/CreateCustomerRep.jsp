@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div style="display: flex; justify-content: center; margin-top: 250px;">
 		<form action="CreateCustomerRepController.jsp" method="POST">
@@ -27,7 +27,7 @@
 
 		</form>
 	</div>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

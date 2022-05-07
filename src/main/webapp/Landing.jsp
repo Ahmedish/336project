@@ -14,17 +14,17 @@
 <body>
 	<%@ page import="java.sql.*"%>
 
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<%
 	if ((session.getAttribute("username") == null)) {
 	%>
 	<h1>You Are Not Logged In</h1>
 	<br />
-	<a class="btn btn-primary" href="Login.jsp">End-User Login</a>
-	<a class="btn btn-primary" href="CustomerRepLogin.jsp">Customer Rep Login</a>
-	<a class="btn btn-primary" href="AdminLogin.jsp">Admin Login</a>
-	<a class="btn btn-primary" href="Register.jsp">Register</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/Login.jsp">End-User Login</a>
+	<a class="btn btn-primary" href="<%=projectName%>/CustomerRep/CustomerRepLogin.jsp">Customer Rep Login</a>
+	<a class="btn btn-primary" href="<%=projectName%>/Admin/AdminLogin.jsp">Admin Login</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/Register.jsp">Register</a>
 	<%
 	} else {
 	%>
@@ -42,25 +42,26 @@
 	<%
 	if (userType.equals("admin")) {
 	%>
-	<%@ include file="AdminDashboard.jsp"%>
+	<%@ include file="/Admin/AdminDashboard.jsp"%>
 	<%
 	} else if (userType.equals("enduser")) {
 	%>
-	<a class="btn btn-danger" href="Logout.jsp">Log out</a>
-	<a class="btn btn-success" href="CreateAuction.jsp">Create Auction</a>
-	<a class="btn btn-primary" href="LiveAuctions.jsp">View Live Auctions</a>
-	<a class="btn btn-primary" href="UserAskQuestion.jsp">Ask Question</a>
-	<a class="btn btn-primary" href="UserViewQuestion.jsp">View Question</a>
+	<h1>Welcome <%=currentUser%></h1>
+	<a class="btn btn-danger" href="<%=projectName%>/Logout.jsp">Log out</a>
+	<a class="btn btn-success" href="<%=projectName%>/EndUser/CreateAuction.jsp">Create Auction</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/LiveAuctions.jsp">View Live Auctions</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserAskQuestion.jsp">Ask Question</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Question</a>
 	<%
 	} else if (userType.equals("customerrep")) {
 	%>
-	<%@ include file="CustomerRepDashboard.jsp"%>
+	<%@ include file="/CustomerRep/CustomerRepDashboard.jsp"%>
 	<%
 	}
 	%>
 	<%
 	}
 	%>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 </body>
 </html>

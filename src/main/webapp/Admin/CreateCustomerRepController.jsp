@@ -23,7 +23,7 @@
         }
         else{
             stmt.executeUpdate("INSERT INTO customer_rep_users VALUES ('" +userid+ "', '" +pass+ "');");
-            response.sendRedirect("Landing.jsp");
+            response.sendRedirect(projectName+"/Landing.jsp");
         }
     %>
 

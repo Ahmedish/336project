@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%@ page import="java.sql.*"%>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<%
 	ResultSet questionCheck;
@@ -28,7 +28,7 @@
 		out.println("<p>A: <i>" + answer + "</p> <br>");
 	}
 	%>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>
