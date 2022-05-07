@@ -21,8 +21,9 @@
     	 ResultSet rs2;
     	    rs2 = stmt.executeQuery("select * from customer_rep_users where username='" + userid + "' and password='" + pass + "'");
     	    if (rs2.next()) {
-    	    	session.setAttribute("user", userid); // the username will be stored in the session
-    	        response.sendRedirect("CustomerRepDashboard.jsp");
+    	    	session.setAttribute("username", userid); // the username will be stored in the session
+    	    	session.setAttribute("userType", "customerrep"); // the username will be stored in the session
+    	        response.sendRedirect("Landing.jsp");
     	    } else {
     	    	out.println("Username doesn't exist <a href= 'Landing.jsp'>Go To Landing</a>");
     	    }

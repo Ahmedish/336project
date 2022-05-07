@@ -21,9 +21,9 @@
     	 ResultSet rs2;
     	    rs2 = stmt.executeQuery("select * from admin_users where username='" + userid + "' and password='" + pass + "'");
     	    if (rs2.next()) {
-    	    	session.setAttribute("user", userid); // the username will be stored in the session
-    	    	session.setAttribute("isAdmin", true);
-    	        response.sendRedirect("AdminDashboard.jsp");
+    	    	session.setAttribute("username", userid); // the username will be stored in the session
+    	    	session.setAttribute("userType", "admin");
+    	        response.sendRedirect("Landing.jsp");
     	    } else {
     	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Admin Account</a>");
     	    }

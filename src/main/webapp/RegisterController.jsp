@@ -28,6 +28,7 @@
                	session.setAttribute("user", finalUserId.getInt("user_id"));
            	}
             session.setAttribute("username", userid); 
+            session.setAttribute("userType", "enduser"); 
             response.sendRedirect("Landing.jsp");
         }
     %>
