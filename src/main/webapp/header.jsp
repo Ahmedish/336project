@@ -9,7 +9,7 @@ String currentUser = (String) session.getAttribute("username");
 String userType = (String) session.getAttribute("userType");
 %>
 <% if(currentUser == null){ %>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="Landing.jsp">Buy Me</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
@@ -32,7 +32,7 @@ String userType = (String) session.getAttribute("userType");
 </nav>
 <% } else { %>
 	<% if(userType.equals("admin")){ %>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	  <a class="navbar-brand" href="Landing.jsp">Buy Me</a>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav">
@@ -49,7 +49,7 @@ String userType = (String) session.getAttribute("userType");
 	  </div>
 	</nav>	
 	<% } else if(userType.equals("enduser")) { %>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	  <a class="navbar-brand" href="Landing.jsp">Buy Me</a>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav">
@@ -72,7 +72,7 @@ String userType = (String) session.getAttribute("userType");
 	  </div>
 	</nav>	
 	<% } else if(userType.equals("customerrep")) { %>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	  <a class="navbar-brand" href="Landing.jsp">Buy Me</a>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav">

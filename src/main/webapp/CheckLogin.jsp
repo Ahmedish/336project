@@ -29,11 +29,11 @@
     	    	session.setAttribute("userType", "enduser"); // the username will be stored in the session
     	        response.sendRedirect("Landing.jsp");
     	    } else {
-    	    	out.println("Username doesn't exist <a href= 'Register.jsp'>Create An Account</a>");
+    	    	response.sendRedirect("Login.jsp");
     	    }
     }
     else{
-    	out.println("Username doesn't exist");
+    	out.println("Username doesn't exist <br /><a href='Register.jsp'>Create An Account</a>");
     }
 %>
 
