@@ -10,19 +10,19 @@
 <body>
     <%@ page import ="java.sql.*" %>
     <%
-    	String init_price = request.getParameter("init_price");
-    	String min_price = request.getParameter("min_price");
-    	String increment = request.getParameter("increment");
-    	String close_date = request.getParameter("close_date");
-    	String item_id = request.getParameter("item_id");
+    	String price = request.getParameter("price");
+    	String auction_id = request.getParameter("auction_id");
     	int username = (int) session.getAttribute("user");
-    	
+    	long millis = System.currentTimeMillis();
+    	java.sql.Date curr = new java.sql.Date(millis);
+	
         
         ApplicationDB db = new ApplicationDB();    
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
         
-        stmt.executeUpdate("INSERT INTO auction (seller_username, init_price, min_price, curr_price, increment, close_date, item_id) VALUES ('" +username+ "', '" +init_price+ "', '" +min_price+ "', '" +init_price+ "', '" +increment+ "', '" +close_date+ "', '" +item_id+ "');");
+        stmt.executeUpdate("INSERT INTO bid (user_id, price, bid_date, auction_id) VALUES ('" +username+ "', '" +price+ "', '" +curr+ "', '" +auction_id + "');");
+        stmt.executeUpdate("UPDATE auction SET buyer_username='"+username+"', curr_price='"+price+"' WHERE auction_id='"+auction_id+"'");
         response.sendRedirect("LiveAuctions.jsp");
         
         
