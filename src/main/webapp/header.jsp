@@ -7,7 +7,7 @@ Connection connection = db.getConnection();
 Statement stmt = connection.createStatement();
 String currentUser = (String) session.getAttribute("username");
 String userType = (String) session.getAttribute("userType");
-String projectName = "/336projects";
+String projectName = "/cs336Sample";
 %>
 <% if(currentUser == null){ %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -65,9 +65,6 @@ String projectName = "/336projects";
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Questions</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="<%=projectName%>/EndUser/UserDashboard.jsp">User Dashboard</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/Logout.jsp">Log Out</a>

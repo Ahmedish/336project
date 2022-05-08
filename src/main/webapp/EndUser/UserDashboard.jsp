@@ -87,8 +87,24 @@ ResultSet auctionCheck = stmt
 		}
 		if (!isOpen) {
 		%>
-		<p>No Past auctions</p>
+		<p>No Past Auctions</p>
 		<%
 		}
 		%>
 	</div>
+	<h2>My Bids</h2>
+	<% 
+		ResultSet bidCheck = stmt.executeQuery("SELECT * FROM bid where user_id = " +user_id+ ";");
+		boolean hasBids = false;
+		while (bidCheck.next()){
+			hasBids = true;
+			int bid_price = bidCheck.getInt("price");
+			Date bid_date = bidCheck.getDate("bid_date");
+			int auction_id = bidCheck.getInt("auction_id");
+			out.println("<p>You bid $" +bid_price+ " on " +bid_date+ " for auction #" +auction_id+ "</p>");
+		}
+		if (!hasBids) {
+			out.println("No Past Bids");
+		}
+		
+	%>
