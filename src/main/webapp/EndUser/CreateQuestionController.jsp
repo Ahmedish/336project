@@ -18,7 +18,7 @@
 
 	stmt.executeUpdate("INSERT INTO questions (username, user_id, question, answer) VALUES ('" + username + "', '" + user_id
 			+ "','" + question + "', '');");
-	response.sendRedirect(projectName + "/Landing.jsp");
+	response.sendRedirect(projectName + "/EndUser/UserViewQuestion.jsp");
 	%>
 
 </body>

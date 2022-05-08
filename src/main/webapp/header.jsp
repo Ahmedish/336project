@@ -67,6 +67,9 @@ String projectName = "/336projects";
 			<a class="nav-link" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Questions</a>
 		  </li>
 		  <li class="nav-item">
+			<a class="nav-link" href="<%=projectName%>/EndUser/UserDashboard.jsp">User Dashboard</a>
+		  </li>
+		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/Logout.jsp">Log Out</a>
 		  </li>
 		</ul>
