@@ -15,7 +15,7 @@
 	<%@ page import="java.util.List"%>
 	<%@ include file="/header.jsp"%>
 	<h1>Bid Auction Management</h1>
-	<form action="LiveAuctions.jsp" action="POST">
+	<form action="BidAuctionManagement.jsp" action="POST">
 		<div class="input-group">
 			<input name="search" type="search" class="form-control rounded" placeholder="Search"
 				aria-label="Search" aria-describedby="search-addon" />
@@ -60,7 +60,7 @@
 	String search = request.getParameter("search");
 	if (search == null) {
 		auctionCheck = stmt.executeQuery(
-		"SELECT * FROM auction JOIN users on users.user_id=auction.seller_username WHERE close_date > " + "'" + curr
+		"SELECT * FROM auction JOIN users on users.user_id=auction.seller_username JOIN item on item.item_id=auction.item_id WHERE close_date > " + "'" + curr
 				+ "'");
 	} else {
 		auctionCheck = stmt.executeQuery(
@@ -80,16 +80,8 @@
 			int user = auctionCheck.getInt("seller_username");
 			int increment = auctionCheck.getInt("increment");
 			String username = auctionCheck.getString("username");
-			String src = "";
-			if (item_id == 9987) {
-				src = "https://cdn.lookastic.com/mint-skinny-jeans/asos-skinny-jeans-in-light-green-medium-171909.jpg";
-			} else if (item_id == 9988) {
-				src = "https://images.riverisland.com/is/image/RiverIsland/blue-skinny-fit-jeans_306663_main";
-			} else if (item_id == 1234) {
-				src = "https://cdna.lystit.com/photos/2013/12/03/asos-red-super-skinny-jean-product-1-15797925-562278835.jpeg";
-			} else {
-				src = "https://cdna.lystit.com/photos/2013/09/27/asos-mustard-super-skinny-jean-product-1-13733690-930198097.jpeg";
-			}
+			String src = auctionCheck.getString("image_url");
+			
 		%>
 		<div class="card col-sm" style="margin: 10px; text-align: center; flex: 0 0 325px;">
 			<img class="card-img-top" src=<%=src%> data-toggle="modal"

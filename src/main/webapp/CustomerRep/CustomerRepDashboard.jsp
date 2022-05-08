@@ -16,7 +16,7 @@
 				~
 				<%=user%></h5>
 			<p class="card-text"><%=answer.equals(" ") ? "No Answer" : answer%></p>
-			<a btn btn-primary href='CustomerRepReply.jsp?question_id=" + id + "'>Reply</a>
+			<a btn btn-primary href='<%=projectName%>/CustomerRep/CustomerRepReply.jsp?question_id=<%=id%>'>Reply</a>
 		</div>
 	</div>
 	<%

@@ -12,11 +12,26 @@
 <body>
 	<%@ page import="java.sql.*"%>
 	<%@ include file="/header.jsp"%>
-
+	<h1>Questions</h1>
+	<form action="UserViewQuestion.jsp" action="POST" style="margin: 30px 0px">
+		<div class="input-group">
+			<input name="search" type="search" class="form-control rounded" placeholder="Search"
+				aria-label="Search" aria-describedby="search-addon" />
+			<button type="submit" class="btn btn-outline-primary">search</button>
+		</div>
+	</form>
 	<%
 	ResultSet questionCheck;
+	String search = request.getParameter("search");
+	if (search == null) {
+		questionCheck = stmt.executeQuery("SELECT * FROM questions");
+	} else {
+		questionCheck = stmt.executeQuery(
+		"SELECT * FROM questions where question LIKE '%" + search + "%' OR answer LIKE '%" + search + "%'");
+
+	}
+
 	questionCheck = stmt.executeQuery("SELECT * FROM questions");
-	out.println("<h1>Questions</h1>");
 	while (questionCheck.next()) {
 		String user = questionCheck.getString("username");
 		String question = questionCheck.getString("question");
