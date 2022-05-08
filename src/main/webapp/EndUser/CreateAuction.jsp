@@ -34,22 +34,22 @@
 	</form>
 	<br>
 	<h1>Item IDs</h1>
-	<h2>Large Green Skinny Jeans (9987)</h2>
+	<h2>Large Green Skinny Jeans (1)</h2>
 	<img
 		src="https://cdn.lookastic.com/mint-skinny-jeans/asos-skinny-jeans-in-light-green-medium-171909.jpg"
 		width="300px">
 	<br>
-	<h2>Large Blue Skinny Jeans (9988)</h2>
+	<h2>Large Blue Skinny Jeans (2)</h2>
 	<img
 		src="https://images.riverisland.com/is/image/RiverIsland/blue-skinny-fit-jeans_306663_main"
 		width="300px">
 	<br>
-	<h2>Medium Red Super-Skinny Jeans (1234)</h2>
+	<h2>Medium Red Super-Skinny Jeans (3)</h2>
 	<img
 		src="https://cdna.lystit.com/photos/2013/12/03/asos-red-super-skinny-jean-product-1-15797925-562278835.jpeg"
 		width="300px">
 	<br>
-	<h2>Small Yellow Relaxed-Fit Jeans (6239)</h2>
+	<h2>Small Yellow Relaxed-Fit Jeans (4)</h2>
 	<img
 		src="https://cdna.lystit.com/photos/2013/09/27/asos-mustard-super-skinny-jean-product-1-13733690-930198097.jpeg"
 		width="300px">
