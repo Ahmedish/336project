@@ -10,4 +10,13 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>Landing.jsp</welcome-file>   
   </welcome-file-list>
+  <servlet>
+    <servlet-name>CustomerRepLogin</servlet-name>
+    <jsp-file>/CustomerRep/CustomerRepLogin.jsp</jsp-file>
+  </servlet>
+
+  <servlet-mapping>
+	<servlet-name>CustomerRepLogin</servlet-name>
+	<url-pattern>/CustomerRepLogin</url-pattern>
+  </servlet-mapping>
 </web-app>

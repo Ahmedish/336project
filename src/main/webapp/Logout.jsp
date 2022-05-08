@@ -7,9 +7,11 @@
 <title>Logout</title>
 </head>
 <body>
+	<%@ include file="/header.jsp"%>
+
 <%
 session.invalidate();
-response.sendRedirect("Landing.jsp");
+response.sendRedirect(projectName+"/Landing.jsp");
 %>
 
 </body>

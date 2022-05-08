@@ -5,22 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create Question Controller</title>
+<title>Delete Auction</title>
 </head>
 <body>
     <%@ page import ="java.sql.*" %>
     <%
-    	String username = (String) session.getAttribute("username");
-    	int user_id = (int) session.getAttribute("user");
-    	String question = request.getParameter("question");
+    	String username = request.getParameter("username");
+    	String id = request.getParameter("auction_id");
     	
-        
         ApplicationDB db = new ApplicationDB();    
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
-
-        stmt.executeUpdate("INSERT INTO questions (username, user_id, question, answer) VALUES ('" +username+ "', '" +user_id+ "','" +question+ "', '');");
-        response.sendRedirect("Landing.jsp");
+		stmt.executeUpdate("DELETE FROM auction WHERE auction_id='"+id+"'");
+		response.sendRedirect("BidAuctionManagement.jsp");
         
         
     %>

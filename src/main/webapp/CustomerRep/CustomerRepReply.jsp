@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%@ page import="java.sql.*"%>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<%
 	String id = request.getParameter("question_id");
@@ -33,7 +33,7 @@
 		<button type="submit" class="btn btn-success">Submit</button>
 		</form>
 	</div>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

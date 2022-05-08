@@ -9,7 +9,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 	<div style="display: flex; justify-content: center; margin-top: 250px;">
 		<form action="RegisterController.jsp" method="POST">
 			<h1 style="text-align: center;">Register</h1>
@@ -24,7 +24,7 @@
 
 		</form>
 	</div>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

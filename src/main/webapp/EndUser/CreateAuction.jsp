@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<h1>Create Auction</h1>
 	<form action="CreateAuctionController.jsp" method="POST">
@@ -53,7 +53,7 @@
 	<img
 		src="https://cdna.lystit.com/photos/2013/09/27/asos-mustard-super-skinny-jean-product-1-13733690-930198097.jpeg"
 		width="300px">
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<%@ include file="header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<h1>Create Auction</h1>
 
@@ -21,7 +21,7 @@
 		</div>
 		<button type="submit" class="btn btn-success">Submit</button>
 	</form>
-	<%@ include file="footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 </body>
 </html>
