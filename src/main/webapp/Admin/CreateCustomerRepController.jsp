@@ -23,9 +23,10 @@
         }
         else{
             stmt.executeUpdate("INSERT INTO customer_rep_users VALUES ('" +userid+ "', '" +pass+ "');");
-            response.sendRedirect(projectName+"/Landing.jsp");
+            response.sendRedirect("../Landing.jsp");
         }
     %>
 
 </body>
 </html>
+
