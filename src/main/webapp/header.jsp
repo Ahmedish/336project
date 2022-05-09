@@ -11,7 +11,7 @@ if(session.getAttribute("user") != null){
 	user_id = (int) session.getAttribute("user");
 }
 String userType = (String) session.getAttribute("userType");
-String projectName = "/336projects";
+String projectName = "/cs336Sample";
 %>
 <% if(currentUser == null){ %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -69,6 +69,9 @@ String projectName = "/336projects";
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Questions</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="<%=projectName%>/EndUser/ViewHistory.jsp">View User History</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/Logout.jsp">Log Out</a>
