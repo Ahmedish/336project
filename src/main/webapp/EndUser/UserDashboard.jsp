@@ -92,6 +92,7 @@ ResultSet auctionCheck = stmt
 		}
 		%>
 	</div>
+	</div>
 	<h2>My Bids</h2>
 	<% 
 		ResultSet bidCheck = stmt.executeQuery("SELECT * FROM bid where user_id = " +user_id+ ";");

@@ -53,6 +53,7 @@
 	<a class="btn btn-primary" href="<%=projectName%>/EndUser/LiveAuctions.jsp">View Live Auctions</a>
 	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserAskQuestion.jsp">Ask Question</a>
 	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Question</a>
+	<a class="btn btn-primary" href="<%=projectName%>/EndUser/ViewHistory.jsp">View History</a>
 	</div>
 	<br>
 	<%@ include file="/EndUser/UserDashboard.jsp"%>
