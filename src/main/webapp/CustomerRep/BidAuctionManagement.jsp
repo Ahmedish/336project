@@ -134,7 +134,9 @@
 										<%=b.date%></p>
 								</div>
 								<div class="col" style="margin-top: -15px">
-									<form action="DeleteBid.jsp?bid_id=<%=b.id%>" action="POST">
+									<form action="DeleteBid.jsp" action="POST">
+									  	<input type="hidden" name="bid_id" value=<%=b.id%> /> 
+									
 										<button type="submit" class="btn btn-danger">Delete</button>
 									</form>
 								</div>

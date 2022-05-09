@@ -48,11 +48,6 @@
 	%>
 	<h1 style="margin: 20px 0px">Welcome <%=currentUser%></h1>
 	<%@ include file="/EndUser/UserDashboard.jsp"%>
-	<a class="btn btn-danger" href="<%=projectName%>/Logout.jsp">Log out</a>
-	<a class="btn btn-success" href="<%=projectName%>/EndUser/CreateAuction.jsp">Create Auction</a>
-	<a class="btn btn-primary" href="<%=projectName%>/EndUser/LiveAuctions.jsp">View Live Auctions</a>
-	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserAskQuestion.jsp">Ask Question</a>
-	<a class="btn btn-primary" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Question</a>
 	<%
 	} else if (userType.equals("customerrep")) {
 	%>

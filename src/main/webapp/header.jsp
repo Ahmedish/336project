@@ -6,6 +6,10 @@ ApplicationDB db = new ApplicationDB();
 Connection connection = db.getConnection();
 Statement stmt = connection.createStatement();
 String currentUser = (String) session.getAttribute("username");
+int user_id = -1;
+if(session.getAttribute("user") != null){
+	user_id = (int) session.getAttribute("user");
+}
 String userType = (String) session.getAttribute("userType");
 String projectName = "/336projects";
 %>
@@ -65,9 +69,6 @@ String projectName = "/336projects";
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View Questions</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="<%=projectName%>/EndUser/UserDashboard.jsp">User Dashboard</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="<%=projectName%>/Logout.jsp">Log Out</a>

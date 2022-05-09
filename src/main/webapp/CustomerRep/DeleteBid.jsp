@@ -16,6 +16,7 @@
         ApplicationDB db = new ApplicationDB();    
         Connection connection = db.getConnection();    
         Statement stmt = connection.createStatement();
+       	System.out.println(id); 
 		stmt.executeUpdate("DELETE FROM bid WHERE bid_id='"+id+"'");
 		response.sendRedirect("BidAuctionManagement.jsp");
         

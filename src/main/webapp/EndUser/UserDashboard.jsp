@@ -2,7 +2,6 @@
 <h2>My Live Auctions</h2>
 <%
 String username = (String) session.getAttribute("username");
-int user_id = (int) session.getAttribute("user");
 String question = request.getParameter("question");
 long millis = System.currentTimeMillis();
 java.sql.Date curr = new java.sql.Date(millis);
@@ -15,7 +14,7 @@ ResultSet auctionCheck = stmt
 	<%
 	boolean isLiveOpen = false;
 	while (auctionCheck.next()) {
-		isLiveOpen=true;
+		isLiveOpen = true;
 		int id = auctionCheck.getInt("auction_id");
 		int price = auctionCheck.getInt("curr_price");
 		Date date = auctionCheck.getDate("close_date");
@@ -50,7 +49,7 @@ ResultSet auctionCheck = stmt
 </div>
 
 <h2>My Previous Auctions</h2>
-<div style="display: flex; flex-wrap: wrap; ">
+<div style="display: flex; flex-wrap: wrap;">
 	<%
 	ResultSet auctionCheck2 = stmt
 			.executeQuery("SELECT * FROM auction JOIN item on auction.item_id=item.item_id WHERE seller_username = "
@@ -92,3 +91,14 @@ ResultSet auctionCheck = stmt
 		}
 		%>
 	</div>
+
+</div>
+<div>
+	<a class="btn btn-danger" href="<%=projectName%>/Logout.jsp">Log out</a> <a
+		class="btn btn-success" href="<%=projectName%>/EndUser/CreateAuction.jsp">Create
+		Auction</a> <a class="btn btn-primary" href="<%=projectName%>/EndUser/LiveAuctions.jsp">View
+		Live Auctions</a> <a class="btn btn-primary"
+		href="<%=projectName%>/EndUser/UserAskQuestion.jsp">Ask Question</a> <a
+		class="btn btn-primary" href="<%=projectName%>/EndUser/UserViewQuestion.jsp">View
+		Question</a>
+</div>
